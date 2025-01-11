@@ -1,0 +1,13 @@
+{%extends 'base.html' %}
+
+{% block head %} {% endblock %}
+
+
+{% block body %} 
+
+    <h1> Result: {{ result }} </h1>
+    <form action=" {{ url_for('index') }} " method="GET">
+        <button type="submit"> DONE </button>
+    </form>
+
+{% endblock %}

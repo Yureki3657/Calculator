@@ -1,0 +1,16 @@
+{%extends 'base.html' %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <h1>Hello </h1>
+    <div class="container" id="container">
+        <h2 style="text-align: center"> CALCULATOR </h2>
+        <button class="operator" id="plus"> + </button>
+        <button class="operator" id="minus"> - </button>
+        <button class="operator" id="multi"> * </button>
+        <button class="operator" id="div"> / </button>
+    </div>
+{% endblock %}

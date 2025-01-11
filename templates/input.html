@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{%block head %}
+<h3> Enter 2 integer </h3> 
+{% endblock %}
+
+{%block body %} 
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
+    <table >
+        <tr>
+            <td>
+                <form method =  "POST">
+                    <input type="number" name="val1">
+                    <input type="number" name="val2">
+                    <input type="submit" value="Confirm">    
+                </form>
+            </td>
+            
+        </tr>
+    </table>
+
+{% endblock %}
+
